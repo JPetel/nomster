@@ -30,7 +30,15 @@ body {
 
 .navbar-inverse .navbar-brand {
   color: #00FB4C;
-  font-family: 'rubikblack_italic';
+  font-family: 'rubikitalic';
   font-size: 26px;
+}
+
+.pagination a {
+padding: 2px 5px 2px 5px;
+margin: 2px;
+border: 1px solid #aaaadd;
+text-decoration: none;
+color: black;
 }
 
