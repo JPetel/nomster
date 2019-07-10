@@ -9,7 +9,11 @@
   <br />
   <p><%= @place.description %></p>
   <div class="float-bottom">
-    <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
+      <% if current_user && current_user == @place.user %>
+      <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
+      <% end %>
+      <% if current_user && current_user == @place.user %>
     <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you would like to delete this?'}, class: 'btn btn-danger' %>
+    <% end %>
   </div>
 </div>
