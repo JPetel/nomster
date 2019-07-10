@@ -8,7 +8,8 @@
   <br />
   <br />
   <p><%= @place.description %></p>
-  <div class="float-right">
+  <div class="float-bottom">
     <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
+    <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you would like to delete this?'}, class: 'btn btn-danger' %>
   </div>
 </div>
