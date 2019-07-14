@@ -56,7 +56,7 @@
 <br />
 <br />
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+<button type="button" class="btn btn-primary col-2 offset-9 " data-toggle="modal" data-target="#myModal">
   Add a Comment
 </button>
 
@@ -89,14 +89,10 @@
 </div>
 
 
+<div class="col-10 offset-1">
+  <h1 class="float-left">Comments</h1>
+  <div class="clear"></div>
 
-
-
-
-
-
-
-<h1>Comments</h1>
 
 <% @place.comments.each do |comment| %>
   <div>
@@ -111,6 +107,8 @@
     </blockquote>
   </div>
 <% end %>
+</div>
+</div>
 
 <br /><br />
 <br /><br />
