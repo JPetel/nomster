@@ -9,10 +9,7 @@ end
 
 
 private
-
-def comment_params
-  params.require(:comments).permit(:message, :rating)
-end
-
-
+  def comment_params
+    params.require(:comment).permit(:message, :rating)
+  end
 end
