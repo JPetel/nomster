@@ -9,7 +9,6 @@
   <br />
   <p><%= @place.description %></p>
 
-
 <% if @place.latitude.present? && @place.longitude.present? %>
 
     <script>
@@ -32,10 +31,9 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7CBkliL5zvZKctC9vZmV72X1r87zvoc0&callback=initMap">
     </script>
-  
-
 
     <div id="map"></div>
+
 <% end %>
 
 <br />
@@ -56,7 +54,10 @@
 <br />
 <br />
 
-<button type="button" class="btn btn-primary col-2 offset-9 " data-toggle="modal" data-target="#myModal">
+<div class="col-10 offset-1">
+<h1> Add a Comment </h1>
+<br />
+<button type="button" class="btn btn-primary col-2 " data-toggle="modal" data-target="#myModal">
   Add a Comment
 </button>
 
@@ -88,6 +89,47 @@
   </div>
 </div>
 
+<br />
+<br />
+
+<div class="col-10 offset-1">
+<h1> Add a Photo </h1>
+<br />
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#photoModal">
+  Add a Photo!
+</button>
+
+<div class="modal" id="photoModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"> Add a Photo</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+    <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+        <div class="modal-body">
+          <%= f.input :picture %>
+          <%= f.input :caption %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+<br />
+<br />
 
 <div class="col-10 offset-1">
   <h1 class="float-left">Comments</h1>
@@ -109,16 +151,8 @@
 <% end %>
 </div>
 </div>
-
 <br /><br />
 <br /><br />
 <br /><br />
-
-
-
-
-
-
-
 
 
