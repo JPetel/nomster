@@ -124,9 +124,9 @@
   </div>
 </div>
 
-<p>
-  <%= @photo.picture_url.to_s %>
-</p>
+    <% @place.photos.each do |photo| %>
+    <%= image_tag photo.picture_url.to_s %>
+    <% end %>
 
 
 
