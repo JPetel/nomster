@@ -57,7 +57,7 @@
 <div class="col-10 offset-1">
 <h1> Add a Comment </h1>
 <br />
-<button type="button" class="btn btn-primary col-2 " data-toggle="modal" data-target="#myModal">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
   Add a Comment
 </button>
 
@@ -124,9 +124,15 @@
   </div>
 </div>
 
+
+
+<div class="row">
+    <div class="column">
     <% @place.photos.each do |photo| %>
     <%= image_tag photo.picture_url.to_s %>
     <% end %>
+  </div>
+</div>
 
 
 
