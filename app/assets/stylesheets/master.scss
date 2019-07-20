@@ -99,13 +99,27 @@ blockquote p {
 }
 
 
+.carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  width: 70%;
+  min-height: 550px;
+  max-height: 550px;
+  line-height: 1;
+}
 
-
-
-
-
-
-
+.carousel-caption {
+    font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+    font-size: 60px;
+    font-weight: 100;
+    text-shadow: rgba(0, 0, 0, 0.95)2px 2px;
+    width: 70%;
+    position: absolute;
+    left: 0;
+    
+}
 
 
 
