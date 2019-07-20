@@ -124,10 +124,11 @@
   </div>
 </div>
 
+<br />
+<br />
 
-
-<div class="row">
-    <div class="column col-10 col-sm-6">
+<div class="pic_row">
+    <div class="pic_column">
     <% @place.photos.each do |photo| %>
     <%= image_tag photo.picture_url.to_s %>
     <% end %>
